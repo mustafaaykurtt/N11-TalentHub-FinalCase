@@ -1,8 +1,6 @@
-﻿package com.n11.userservice.dto.request;
+package com.n11.userservice.dto.request;
 
-import com.n11.userservice.model.User;
-import com.n11.userservice.util.enums.Score;
-import jakarta.persistence.*;
+
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 

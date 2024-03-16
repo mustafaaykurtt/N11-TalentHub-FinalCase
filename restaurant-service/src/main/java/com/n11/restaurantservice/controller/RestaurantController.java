@@ -14,9 +14,10 @@ import java.util.List;
 
 /**
  * Created By Mustafa Aykurt
- * Date:14.03.2024
- * Time:03:46
+ * Date:15.03.2024
+ * Time:00:29
  */
+
 @RestController
 @RequestMapping("api/v1/restaurants")
 public class RestaurantController {
@@ -31,7 +32,7 @@ public class RestaurantController {
     public ResponseEntity<GenericRestResponse> saveRestaurant(@RequestBody RestaurantSaveRequest request){
         restaurantService.saveRestaurant(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(GenericRestResponse.of("successful"));
-    };
+    }
 
     @PutMapping("/{id}")
     public ResponseEntity<GenericRestResponse<RestaurantDto>> updateRestaurant(@Valid @PathVariable String id,

@@ -8,9 +8,10 @@ import java.time.LocalDateTime;
 
 /**
  * Created By Mustafa Aykurt
- * Date:26.02.2024
- * Time:17:52
+ * Date:15.03.2024
+ * Time:00:32
  */
+
 @Getter
 @Setter
 @JsonInclude(JsonInclude.Include.NON_NULL)

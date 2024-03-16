@@ -1,4 +1,4 @@
-﻿package com.n11.userservice.dto.request;
+package com.n11.userservice.dto.request;
 
 import jakarta.validation.constraints.NotNull;
 

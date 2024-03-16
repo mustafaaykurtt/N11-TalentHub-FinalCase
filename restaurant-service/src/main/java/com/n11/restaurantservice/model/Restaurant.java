@@ -1,6 +1,6 @@
 package com.n11.restaurantservice.model;
 
-import com.n11.restaurantservice.util.enums.PaymentMethods;
+
 import lombok.Getter;
 import lombok.Setter;
 import nonapi.io.github.classgraph.json.Id;
@@ -11,13 +11,12 @@ import java.time.LocalDateTime;
 
 /**
  * Created By Mustafa Aykurt
- * Date:14.03.2024
- * Time:03:13
+ * Date:15.03.2024
+ * Time:00:15
  */
-
-@SolrDocument(collection = "restaurants")
 @Getter
 @Setter
+@SolrDocument(solrCoreName = "n11_restaurants")
 public class Restaurant {
 
     @Id
@@ -39,13 +38,10 @@ public class Restaurant {
     @Indexed(name = "country", type = "string")
     private String country;
 
-    @Indexed(name = "paymentMethod", type = "tmulti")
-    private PaymentMethods paymentMethod;
-
-    @Indexed(name = "latitude", type = "tpoint")
+    @Indexed(name = "latitude", type = "tdouble")
     private Double latitude;
 
-    @Indexed(name = "longitude", type = "tpoint")
+    @Indexed(name = "longitude", type = "tdouble")
     private Double longitude;
 
     @Indexed(name = "createDate", type = "pdate")
@@ -53,6 +49,9 @@ public class Restaurant {
 
     @Indexed(name = "updateDate", type = "pdate")
     private LocalDateTime updateDate;
+
+    @Indexed(name = "rating", type = "tdouble")
+    private String rating;
 
 
 }
