@@ -6,6 +6,24 @@ package com.n11.restaurantservice.dto.response;
  * Time:00:31
  */
 
-public record RestaurantDto() {
+public record RestaurantDto(
+        String id,
+
+        String name,
+
+        String address,
+
+        String city,
+
+        String district,
+
+        String country,
+
+        Double latitude,
+
+        Double longitude,
+
+        Double rating
+) {
 
 }

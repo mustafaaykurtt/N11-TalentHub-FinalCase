@@ -4,9 +4,12 @@ package com.n11.restaurantservice.model;
 import lombok.Getter;
 import lombok.Setter;
 import nonapi.io.github.classgraph.json.Id;
+import org.apache.solr.client.solrj.beans.Field;
+import org.springframework.data.geo.Point;
 import org.springframework.data.solr.core.mapping.Indexed;
 import org.springframework.data.solr.core.mapping.SolrDocument;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
@@ -17,7 +20,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @SolrDocument(solrCoreName = "n11_restaurants")
-public class Restaurant {
+public class Restaurant implements Serializable {
 
     @Id
     @Indexed(name = "id", type = "string")
@@ -38,11 +41,8 @@ public class Restaurant {
     @Indexed(name = "country", type = "string")
     private String country;
 
-    @Indexed(name = "latitude", type = "tdouble")
-    private Double latitude;
-
-    @Indexed(name = "longitude", type = "tdouble")
-    private Double longitude;
+    @Indexed(name = "location", type = "location")
+    private Point location;
 
     @Indexed(name = "createDate", type = "pdate")
     private LocalDateTime createDate;
@@ -52,6 +52,5 @@ public class Restaurant {
 
     @Indexed(name = "rating", type = "tdouble")
     private Double rating;
-
 
 }

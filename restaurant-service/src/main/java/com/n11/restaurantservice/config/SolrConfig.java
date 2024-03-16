@@ -32,4 +32,5 @@ public class SolrConfig {
         return new SolrTemplate(solrClient);
     }
 
+
 }

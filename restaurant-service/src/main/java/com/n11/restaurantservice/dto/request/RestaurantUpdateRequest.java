@@ -6,5 +6,23 @@ package com.n11.restaurantservice.dto.request;
  * Time:00:31
  */
 
-public record RestaurantUpdateRequest() {
+public record RestaurantUpdateRequest(
+        String id,
+
+        String name,
+
+        String address,
+
+        String city,
+
+        String district,
+
+        String country,
+
+        Double latitude,
+
+        Double longitude,
+
+        Double rating
+) {
 }

@@ -1,6 +1,7 @@
 package com.n11.restaurantservice.util.mapper;
 
 import com.n11.restaurantservice.dto.request.RestaurantSaveRequest;
+import com.n11.restaurantservice.dto.request.RestaurantUpdateRequest;
 import com.n11.restaurantservice.dto.response.RestaurantDto;
 import com.n11.restaurantservice.model.Restaurant;
 import org.mapstruct.*;
@@ -15,10 +16,10 @@ import org.mapstruct.*;
 public interface RestaurantMapper {
     Restaurant convertToRestaurant(RestaurantSaveRequest request);
 
-//    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE,
-//            nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS)
-//    @Mapping(target = "id", ignore = true)
-//    void updateUserReviewFromDTO(UserReviewUpdateRequest request, @MappingTarget UserReview review);
+    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE,
+            nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS)
+    @Mapping(target = "id", ignore = true)
+    void updateRestaurantFromDTO(RestaurantUpdateRequest request, @MappingTarget Restaurant restaurant);
 
 
     RestaurantDto convertToRestaurantDto(Restaurant restaurant);

@@ -63,3 +63,11 @@ z
 Juser-service/src/main/java/com/n11/userservice/UserServiceApplication.java,2\7\274600216ea994ec57c56a66c49e750b13213e95
 Å
 Qrestaurant-service/src/main/java/com/n11/restaurantservice/config/DataLoader.java,2\e\2e6373c76975e4f924b19952d20c8ed6e100cd65
+}
+Muser-service/src/main/java/com/n11/userservice/repository/UserRepository.java,9\c\9c9709fdb8a8f4bbfe9e2596cbebb109b61f4b38
+ã
+[restaurant-service/src/main/java/com/n11/restaurantservice/exception/NotFoundException.java,c\0\c026b153dc5139ff306b05706da598370a034fbe
+~
+Nrestaurant-service/src/main/java/com/n11/restaurantservice/model/Location.java,f\3\f3010114f07fd1d5fa752fb76a3f7f3a65afa4ab
+Ñ
+Trestaurant-service/src/main/java/com/n11/restaurantservice/dto/request/UserProp.java,c\e\ce0c879dd8363a54f8c5fc5c92800bf13c0dfa2a

@@ -4,6 +4,7 @@ import com.n11.restaurantservice.model.Restaurant;
 import com.n11.restaurantservice.repository.RestaurantRepository;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.data.geo.Point;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
@@ -41,8 +42,7 @@ public class DataLoader implements ApplicationRunner {
             while ((line = reader.readLine()) != null) {
                 String[] data = line.split(";");
                 Restaurant restaurant = new Restaurant();
-                restaurant.setLatitude(Double.valueOf(data[0]));
-                restaurant.setLongitude(Double.valueOf(data[1]));
+                restaurant.setLocation(new Point(Double.valueOf(data[0]),Double.valueOf(data[1])));
                 restaurant.setName(data[2]);
                 restaurant.setAddress(data[3]);
                 restaurant.setCity(data[4]);
