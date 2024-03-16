@@ -51,7 +51,7 @@ public class Restaurant {
     private LocalDateTime updateDate;
 
     @Indexed(name = "rating", type = "tdouble")
-    private String rating;
+    private Double rating;
 
 
 }

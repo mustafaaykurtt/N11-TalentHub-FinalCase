@@ -38,7 +38,7 @@ public class DataLoader implements ApplicationRunner {
 
     private void loadUsersFromCsv() {
         try (InputStream inputStream = getClass().getResourceAsStream("/users.csv");
-             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
+             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream,"UTF-8"))) {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
             String line;
