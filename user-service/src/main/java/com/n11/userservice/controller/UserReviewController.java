@@ -1,7 +1,6 @@
 package com.n11.userservice.controller;
 
 import com.n11.userservice.dto.request.UserReviewSaveRequest;
-import com.n11.userservice.dto.response.UserDto;
 import com.n11.userservice.dto.response.UserReviewDto;
 import com.n11.userservice.dto.request.UserReviewUpdateRequest;
 import com.n11.userservice.general.GenericRestResponse;
@@ -11,7 +10,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 /**
  * Created By Mustafa Aykurt
@@ -47,11 +45,7 @@ public class UserReviewController {
         return ResponseEntity.status(200).body(GenericRestResponse.of(userReviewDto, "n11.update.user.success"));
     }
 
-    @GetMapping("/{id}/recommendations")
-    public ResponseEntity<GenericRestResponse<List<UserReviewDto>>> restaurantRecommendation(@PathVariable Long id) {
-        var userReviewDto = userReviewService.restaurantRecommendation(id);
-        return ResponseEntity.status(200).body(GenericRestResponse.of(userReviewDto, "n11.update.user.success"));
-    }
+
 
 
 

@@ -1,9 +1,7 @@
 
 e
-java:S16127"CReplace this lambda with method reference 'NotFoundException::new'.(çÊ´Ãÿÿÿÿÿ8ÓÇ—¬ä1
+java:S16129"CReplace this lambda with method reference 'NotFoundException::new'.(çÊ´Ãÿÿÿÿÿ8®×¦Ïä1
 I
-java:S1602=",Remove useless curly braces around statement(•þ–ù8ÕÇ—¬ä1
-x
-java:S1128"[Remove this unused import 'org.springframework.data.solr.core.query.result.SolrResultPage'.(™®žì8Ì‹ó¿ä1
-B
-java:S1128"%Remove this unused import 'java.awt'.(ï´µ©8Ì‹ó¿ä1
+java:S1602?",Remove useless curly braces around statement(•þ–ù8¯×¦Ïä1
+o
+java:S6204i"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8²×¦Ïä1

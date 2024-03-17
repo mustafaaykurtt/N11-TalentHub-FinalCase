@@ -21,6 +21,7 @@ public interface RestaurantMapper {
     @Mapping(target = "id", ignore = true)
     void updateRestaurantFromDTO(RestaurantUpdateRequest request, @MappingTarget Restaurant restaurant);
 
-
+    @Mapping(target = "latitude", expression = "java(restaurant.getLocation().getX())")
+    @Mapping(target = "longitude", expression = "java(restaurant.getLocation().getY())")
     RestaurantDto convertToRestaurantDto(Restaurant restaurant);
 }

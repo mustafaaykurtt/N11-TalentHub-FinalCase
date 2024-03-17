@@ -1,11 +1,11 @@
 
 L
-java:S3740,"/Provide the parametrized type for this generic.(‹šÙŠ8ğñû¿ä1
+java:S3740%"/Provide the parametrized type for this generic.(‹šÙŠ8şØ•Àä1
 Q
-java:S3740?"/Provide the parametrized type for this generic.(Ç¾©Èÿÿÿÿÿ8ğñû¿ä1
+java:S3740B"/Provide the parametrized type for this generic.(Ç¾©Èÿÿÿÿÿ8şØ•Àä1
+j
+java:S1192."HDefine a constant instead of duplicating this literal "success" 3 times.(á ·ßüÿÿÿÿ8ÿØ•Àä1
 ]
-java:S1172";Remove this unused method parameter "restaurantRepository".(´»ÀÕüÿÿÿÿ8Üßû¿ä1
-H
-java:S1168("+Return an empty collection instead of null.(¥¹ï8õø¿ä1
+java:S1172";Remove this unused method parameter "restaurantRepository".(´»ÀÕüÿÿÿÿ8Ù•Àä1
 M
-java:S1068"0Remove this unused "solrTemplate" private field.(¤òç8Æ€ğ¿ä1
+java:S1068"0Remove this unused "solrTemplate" private field.(¤òç8–Ù•Àä1

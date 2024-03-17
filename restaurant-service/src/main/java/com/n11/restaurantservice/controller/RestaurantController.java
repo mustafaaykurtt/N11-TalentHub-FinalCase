@@ -3,8 +3,8 @@ package com.n11.restaurantservice.controller;
 import com.n11.restaurantservice.dto.request.RestaurantSaveRequest;
 import com.n11.restaurantservice.dto.request.RestaurantUpdateRequest;
 import com.n11.restaurantservice.dto.response.RestaurantDto;
+import com.n11.restaurantservice.dto.response.RestaurantRecommendationDto;
 import com.n11.restaurantservice.general.GenericRestResponse;
-import com.n11.restaurantservice.model.Restaurant;
 import com.n11.restaurantservice.repository.RestaurantRepository;
 import com.n11.restaurantservice.service.RestaurantService;
 import org.springframework.data.solr.core.SolrTemplate;
@@ -33,13 +33,6 @@ public class RestaurantController {
         this.solrTemplate = solrTemplate;
     }
 
-    @PostMapping("/restaurants/near")
-    public List<Restaurant> findRestaurantsNearUser(@RequestParam Double latitude, @RequestParam Double longitude, @RequestParam Integer distance) {
-        restaurantService.findRestaurantsNearUser(latitude, longitude, distance);
-
-        return null;
-    }
-
     @PostMapping
     public ResponseEntity<GenericRestResponse> saveRestaurant(@RequestBody RestaurantSaveRequest request) {
         restaurantService.saveRestaurant(request);
@@ -57,6 +50,16 @@ public class RestaurantController {
     public ResponseEntity<GenericRestResponse<List<RestaurantDto>>> getAllRestaurants() {
         var restaurantDto = restaurantService.getAllRestaurants();
         return ResponseEntity.status(200).body(GenericRestResponse.of(restaurantDto, "success"));
+    }
+
+    @GetMapping("/near")
+    public ResponseEntity<GenericRestResponse<List<RestaurantRecommendationDto>>> findRestaurantsNearUser(
+                                                    @RequestParam Double latitude,
+                                                    @RequestParam Double longitude,
+                                                    @RequestParam Integer distance) {
+        var restaurantRecommendationDto=restaurantService.findRestaurantsNearUser(latitude, longitude, distance);
+
+        return ResponseEntity.status(200).body(GenericRestResponse.of(restaurantRecommendationDto, "success"));
     }
 
     @DeleteMapping("/{id}")

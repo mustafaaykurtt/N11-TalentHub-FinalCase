@@ -1,5 +1,6 @@
 package com.n11.userservice.config;
 
+import com.n11.userservice.general.base.BaseAdditionalFields;
 import com.n11.userservice.model.User;
 import com.n11.userservice.repository.UserRepository;
 import com.n11.userservice.util.enums.Gender;
@@ -54,8 +55,12 @@ public class DataLoader implements ApplicationRunner {
                 user.setLongitude(Double.valueOf(data[6]));
                 user.setGender(Gender.MALE);
                 user.setStatus(UserStatus.ACTIVE);
-                user.getBaseAdditionalFields().setUpdateDate(LocalDateTime.now());
-                user.getBaseAdditionalFields().setCreateDate(LocalDateTime.now());
+
+                BaseAdditionalFields baseAdditionalFields = new BaseAdditionalFields();
+                baseAdditionalFields.setCreateDate((LocalDateTime.now()));
+                baseAdditionalFields.setUpdateDate((LocalDateTime.now()));
+                user.setBaseAdditionalFields(baseAdditionalFields);
+
                 userRepository.save(user);
             }
         } catch (IOException e) {

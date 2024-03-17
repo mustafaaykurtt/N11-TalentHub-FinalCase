@@ -1,18 +1,16 @@
 package com.n11.userservice.service;
 
+import com.n11.userservice.client.RestaurantServiceClient;
 import com.n11.userservice.dto.request.UserReviewSaveRequest;
 import com.n11.userservice.dto.request.UserReviewUpdateRequest;
 import com.n11.userservice.dto.response.UserReviewDto;
 import com.n11.userservice.exception.NotFoundException;
 import com.n11.userservice.general.base.BaseAdditionalFields;
-import com.n11.userservice.model.User;
 import com.n11.userservice.model.UserReview;
 import com.n11.userservice.repository.UserReviewRepository;
 import com.n11.userservice.util.mapper.UserReviewMapper;
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDateTime;
-import java.util.List;
 
 
 /**
@@ -26,7 +24,7 @@ public class UserReviewService {
     private final UserReviewRepository userReviewRepository;
     private final UserReviewMapper reviewMapper;
 
-    public UserReviewService(UserReviewRepository userReviewRepository, UserReviewMapper reviewMapper) {
+    public UserReviewService(UserReviewRepository userReviewRepository, UserReviewMapper reviewMapper, RestaurantServiceClient restaurantServiceClient) {
         this.userReviewRepository = userReviewRepository;
         this.reviewMapper = reviewMapper;
     }
@@ -55,9 +53,6 @@ public class UserReviewService {
         userReviewRepository.delete(inDB);
     }
 
-    public List<UserReviewDto> restaurantRecommendation(Long id) {
-        return null;
-    }
 
 
 }

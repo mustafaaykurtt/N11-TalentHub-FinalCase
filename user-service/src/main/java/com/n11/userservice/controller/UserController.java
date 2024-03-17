@@ -3,6 +3,7 @@ package com.n11.userservice.controller;
 import com.n11.userservice.dto.request.UserSaveRequest;
 import com.n11.userservice.dto.request.UserUpdateRequest;
 import com.n11.userservice.dto.response.UserDto;
+import com.n11.userservice.dto.response.UserReviewDto;
 import com.n11.userservice.general.GenericRestResponse;
 import com.n11.userservice.service.UserService;
 import jakarta.validation.Valid;
@@ -50,6 +51,14 @@ public class UserController {
         var userDto = userService.getUserByIdWithUserDto(id);
         return ResponseEntity.status(200).body(GenericRestResponse.of(userDto,"Success"));
     }
+
+    @GetMapping("/{id}/recommendations")
+    public ResponseEntity<GenericRestResponse<List<UserDto>>> restaurantRecommendation(@PathVariable Long id) {
+        var userReviewDto = userService.restaurantRecommendation(id);
+        return ResponseEntity.status(200).body(GenericRestResponse.of(userReviewDto, "n11.update.user.success"));
+    }
+
+
 
 
     @DeleteMapping("/{id}")
