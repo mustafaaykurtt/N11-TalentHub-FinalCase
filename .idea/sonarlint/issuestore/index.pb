@@ -23,8 +23,6 @@ Qrestaurant-service/src/main/java/com/n11/restaurantservice/config/SolrConfig.ja
 [restaurant-service/src/main/java/com/n11/restaurantservice/general/GenericRestResponse.java,7\0\70c140aa7877b2f5106f0b58413d32881a612504
 Ä
 Prestaurant-service/src/main/java/com/n11/restaurantservice/model/Restaurant.java,2\4\245fa1744595486bf3c21ce0ab26e4de1ed3e615
-â
-Yrestaurant-service/src/main/java/com/n11/restaurantservice/util/enums/PaymentMethods.java,6\5\65dc31718813f03f3371817189e78efa1991992a
 è
 _restaurant-service/src/main/java/com/n11/restaurantservice/controller/RestaurantController.java,6\6\6671e60e6e5b7dad18f36588bd6cfc653c6ddbd0
 ë
@@ -33,8 +31,6 @@ arestaurant-service/src/main/java/com/n11/restaurantservice/dto/request/Restaura
 crestaurant-service/src/main/java/com/n11/restaurantservice/dto/request/RestaurantUpdateRequest.java,9\f\9f0dc3a6d494539b3fb117602ec04adb149b24dc
 ä
 Zrestaurant-service/src/main/java/com/n11/restaurantservice/dto/response/RestaurantDto.java,5\5\55617923941e05c595985db2007e6145d958d95d
-ê
-`restaurant-service/src/main/java/com/n11/restaurantservice/repository/RestaurantRespository.java,7\7\770fe48b341a5d0501bde80a7b89d1ac31111ca1
 è
 _restaurant-service/src/main/java/com/n11/restaurantservice/repository/RestaurantRepository.java,4\3\434c79f6c0b1168fc83f28d8822766d14f277932
 â
@@ -57,8 +53,6 @@ u
 Euser-service/src/main/java/com/n11/userservice/util/enums/Gender.java,8\d\8ddefe742009c79e51f76ef0b8051182218bac01
 u
 Euser-service/src/main/java/com/n11/userservice/config/DataLoader.java,7\3\7360bd888b82ced5c3b27bcc7bd250f54e86c8e4
-F
-user-service/users.csv,a\9\a961c8f54bdc886ff250b1787f0e4181765b6b51
 z
 Juser-service/src/main/java/com/n11/userservice/UserServiceApplication.java,2\7\274600216ea994ec57c56a66c49e750b13213e95
 Å
@@ -67,10 +61,6 @@ Qrestaurant-service/src/main/java/com/n11/restaurantservice/config/DataLoader.ja
 Muser-service/src/main/java/com/n11/userservice/repository/UserRepository.java,9\c\9c9709fdb8a8f4bbfe9e2596cbebb109b61f4b38
 ã
 [restaurant-service/src/main/java/com/n11/restaurantservice/exception/NotFoundException.java,c\0\c026b153dc5139ff306b05706da598370a034fbe
-~
-Nrestaurant-service/src/main/java/com/n11/restaurantservice/model/Location.java,f\3\f3010114f07fd1d5fa752fb76a3f7f3a65afa4ab
-Ñ
-Trestaurant-service/src/main/java/com/n11/restaurantservice/dto/request/UserProp.java,c\e\ce0c879dd8363a54f8c5fc5c92800bf13c0dfa2a
 Ç
 Ruser-service/src/main/java/com/n11/userservice/client/RestaurantServiceClient.java,9\3\9336cc9f4675972243337a0ae13d02dde61b1821
 |
@@ -89,3 +79,17 @@ hrestaurant-service/src/main/java/com/n11/restaurantservice/dto/response/Restaur
 Prestaurant-service/src/main/java/com/n11/restaurantservice/util/Calculation.java,8\b\8b44003b4ee538f9b72454189718d229f21a5167
 ä
 Zuser-service/src/main/java/com/n11/userservice/dto/client/RestaurantRecommendationDto.java,6\3\63c833fda273a8ececeb090efb40f5beeeb277d4
+v
+Fuser-service/src/main/java/com/n11/userservice/error/ErrorHandler.java,8\5\85acd990cf68ed8dca7c9da1e4226775f4f21080
+~
+Nuser-service/src/main/java/com/n11/userservice/error/GenericErrorMessages.java,8\f\8f54d404fe5e3c55c7b589a9aa6ce944691960cd
+
+Ouser-service/src/main/java/com/n11/userservice/exception/NotFoundException.java,4\6\466ca1d49014a684302b29efe9381e49b0af48d0
+Ä
+Puser-service/src/main/java/com/n11/userservice/exception/NotUniqueException.java,b\2\b285d1af63bad116df9c7df89e2ca41a0c4686c4
+{
+Kuser-service/src/main/java/com/n11/userservice/general/base/BaseEntity.java,9\5\95a2a651dafc0ef9b33fc9e9e6ada1f3eae9365d
+t
+Duser-service/src/main/java/com/n11/userservice/model/UserReview.java,e\0\e02b5c89fc3f14f0ccbec0c2685502b4b1509174
+É
+Suser-service/src/main/java/com/n11/userservice/repository/UserReviewRepository.java,1\e\1e82df6325be569c871b5fbf9e5e58ca6d7e669e

@@ -46,25 +46,4 @@ public class UserReviewController {
     }
 
 
-
-
-
-
-
-
-//    @GetMapping("/restaurant/{restaurantId}")
-//    public ResponseEntity<List<UserReviewDTO>> getAllByRestaurantId(@PathVariable Long restaurantId) {
-//        return ResponseEntity.ok(userReviewService.findAllByProductId(productId));
-//    }
-//
-//    @GetMapping("/user/{userId}")
-//    public ResponseEntity<List<UserReviewDTO>> getAllByUserID(@PathVariable Long userId) {
-//        return ResponseEntity.ok(userReviewService.findAllByUserId(userId));
-//    }
-//
-//    @PatchMapping("/edit/{reviewId}")
-//    public ResponseEntity<?> editComment(@PathVariable Long reviewId, @RequestBody UserReviewUpdateRequest request) {
-//        return ResponseEntity.ok(userReviewService.editComment(request));
-//    }
-
 }

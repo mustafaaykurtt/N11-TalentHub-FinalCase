@@ -1,5 +1,6 @@
 package com.n11.userservice.controller;
 
+import com.n11.userservice.dto.client.RestaurantRecommendationDto;
 import com.n11.userservice.dto.request.UserSaveRequest;
 import com.n11.userservice.dto.request.UserUpdateRequest;
 import com.n11.userservice.dto.response.UserDto;
@@ -36,10 +37,6 @@ public class UserController {
         return ResponseEntity.status(200).body(GenericRestResponse.of(userDto, "n11.update.user.success"));
     }
 
-    //password için yaz 0lama ve değiştirme için
-    //activate için yaz
-
-
     @GetMapping
     public ResponseEntity<GenericRestResponse<List<UserDto>>> getAllUsers() {
         var userDto = userService.getAllUsers();
@@ -53,13 +50,10 @@ public class UserController {
     }
 
     @GetMapping("/{id}/recommendations")
-    public ResponseEntity<GenericRestResponse<List<UserDto>>> restaurantRecommendation(@PathVariable Long id) {
-        var userReviewDto = userService.restaurantRecommendation(id);
-        return ResponseEntity.status(200).body(GenericRestResponse.of(userReviewDto, "n11.update.user.success"));
+    public ResponseEntity<GenericRestResponse<List<RestaurantRecommendationDto>>> restaurantRecommendation(@PathVariable Long id) {
+        var restaurantRecommendationDto = userService.restaurantRecommendation(id);
+        return ResponseEntity.status(200).body(GenericRestResponse.of(restaurantRecommendationDto, "n11.update.user.success"));
     }
-
-
-
 
     @DeleteMapping("/{id}")
     public ResponseEntity<GenericRestResponse> deleteUser(@PathVariable Long id) {

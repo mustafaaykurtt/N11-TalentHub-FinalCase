@@ -1,6 +1,7 @@
 package com.n11.userservice.client;
 
 import com.n11.userservice.dto.client.RestaurantDto;
+import com.n11.userservice.dto.client.RestaurantRecommendationDto;
 import com.n11.userservice.general.GenericRestResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +20,7 @@ import java.util.List;
 public interface RestaurantServiceClient {
 
     @GetMapping("/near")
-    ResponseEntity<GenericRestResponse<List<RestaurantDto>>> findRestaurantsNearUser(
+    ResponseEntity<GenericRestResponse<List<RestaurantRecommendationDto>>> findRestaurantsNearUser(
             @RequestParam Double latitude,
             @RequestParam Double longitude,
             @RequestParam Integer distance);

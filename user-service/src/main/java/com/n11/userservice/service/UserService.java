@@ -1,17 +1,15 @@
 package com.n11.userservice.service;
 
 import com.n11.userservice.client.RestaurantServiceClient;
-import com.n11.userservice.dto.client.RestaurantDto;
+import com.n11.userservice.dto.client.RestaurantRecommendationDto;
 import com.n11.userservice.dto.request.UserSaveRequest;
 import com.n11.userservice.dto.request.UserUpdateRequest;
 import com.n11.userservice.dto.response.UserDto;
 import com.n11.userservice.exception.NotFoundException;
-import com.n11.userservice.general.GenericRestResponse;
 import com.n11.userservice.general.base.BaseAdditionalFields;
 import com.n11.userservice.model.User;
 import com.n11.userservice.repository.UserRepository;
 import com.n11.userservice.util.mapper.UserMapper;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -28,7 +26,7 @@ public class UserService {
     private final UserRepository userRepository;
     private final UserMapper userMapper;
     private final RestaurantServiceClient restaurantServiceClient;
-    private final static Integer DISTANCE_TO_THE_USER=10;
+    private final static Integer DISTANCE_TO_THE_USER = 10;
 
     public UserService(UserRepository userRepository, UserMapper userMapper, RestaurantServiceClient restaurantServiceClient) {
         this.userRepository = userRepository;
@@ -47,7 +45,7 @@ public class UserService {
 
     public UserDto updateUser(UserUpdateRequest request) {
         var userDB = getUserById(request.id());
-        userMapper.updateUserFromDTO(request,userDB);
+        userMapper.updateUserFromDTO(request, userDB);
         userDB.getBaseAdditionalFields().setUpdateDate(LocalDateTime.now());
         return userMapper.convertToUserDTO(userRepository.save(userDB));
     }
@@ -68,16 +66,13 @@ public class UserService {
         return userMapper.convertToUserDTO(user);
     }
 
-    public List<UserDto> restaurantRecommendation(Long id) {
+    public List<RestaurantRecommendationDto> restaurantRecommendation(Long id) {
         var userInDB = getUserById(id);
 
-        var restaurantDto =restaurantServiceClient.findRestaurantsNearUser(
-                userInDB.getLatitude(), userInDB.getLongitude(), DISTANCE_TO_THE_USER)
+        return restaurantServiceClient.findRestaurantsNearUser(
+                        userInDB.getLatitude(), userInDB.getLongitude(), DISTANCE_TO_THE_USER)
                 .getBody()
                 .getPayload();
-
-
-        return null;
     }
 
     public void deleteUser(Long id) {
