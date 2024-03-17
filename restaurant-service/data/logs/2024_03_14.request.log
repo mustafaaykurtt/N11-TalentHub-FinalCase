@@ -1,0 +1,9 @@
+172.21.0.1 - - [14/Mar/2024:22:08:38 +0000] "GET / HTTP/1.1" 302 0
+172.21.0.1 - - [14/Mar/2024:22:08:38 +0000] "GET /solr/ HTTP/1.1" 200 3322
+172.21.0.1 - - [14/Mar/2024:22:08:39 +0000] "GET /solr/admin/cores?_=1710454119140&indexInfo=false&wt=json HTTP/1.1" 200 409
+172.21.0.1 - - [14/Mar/2024:22:08:39 +0000] "GET /solr/admin/info/system?_=1710454119141&wt=json HTTP/1.1" 200 1438
+172.21.0.1 - - [14/Mar/2024:22:08:39 +0000] "GET /solr/admin/info/system?_=1710454119141&wt=json HTTP/1.1" 200 1434
+172.21.0.1 - - [14/Mar/2024:23:50:52 +0000] "GET /solr/ HTTP/1.1" 200 3322
+172.21.0.1 - - [14/Mar/2024:23:50:53 +0000] "GET /solr/admin/cores?_=1710460253331&indexInfo=false&wt=json HTTP/1.1" 200 409
+172.21.0.1 - - [14/Mar/2024:23:50:53 +0000] "GET /solr/admin/info/system?_=1710460253331&wt=json HTTP/1.1" 200 1440
+172.21.0.1 - - [14/Mar/2024:23:50:53 +0000] "GET /solr/admin/info/system?_=1710460253331&wt=json HTTP/1.1" 200 1441
